@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title > Partitioning to dual boot </title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 style="text-align:center;"> Partitioning to Dual Boot </h1>
+    <a href="linux.html" target="_blank">Linux</a> 
+    <a href="server.html" target="_blank">Server</a> 
+    <a href="terminal.html" target="_blank">Terminal</a> 
+        <h2> BIOS Tweaks </h2>
+            <p>
+                Before you can boot your PC into an OS, you will want to tweak your bios. 
+                This is also a good test for PC builders to make sure they have installed and assembled
+                everything correctly. CSM uses outdated mbr, whereas BIOS uses gpt.
+            </p>
+            <ul class="text-border"> 
+                <li>Disable secure boot </li>
+                <li>Disable CSM in Bios (Legacy Bios) </li>
+                <li><i>Optional:</i> enable SVM for virtual machines </li>
+            </ul>
+        <h2> Boot Devices </h2>
+            <p>
+                To install multiple operating systems, your hard drive needs to be partitioned correctly. You can use several tools for this.
+                Wintoys is a program that allows you to tweak your windows os before installing it. Ventoys is a software that allows you to load multiple
+                iso's onto one usb. Consider using tiny10/tiny11 as a pre-modified windows install. Also, once again, make sure your disk is using gpt <br>
+                (Mac) Terminal: <br>
+                (Linux) Terminal: <br>
+                (Windows) Cmd: “diskpart” “list disk”<br>
+            </p>
+            <ul class = "text-border">
+                <li> Bootable device for gparted </li>
+                <li> Bootable device for linux </li>
+                <li> Bootable device for windows </li>
+
+            </ul>
+
+        <h2> Gparted </h2>
+            <p>
+                Boot gparted and partition drive. label partitions accordingly <br>
+                <i>e.g.</i>
+            </p>
+            <dl class = "text-border">
+                <di>Windows </di>
+                    <dd> 300 GB ; (NTFS)</dd>
+                <di> Linux</di>
+                    <dd> 650 GB ; (EXT4) </dd>
+                <di> Shared </di>
+                    <dd> 50 GB ; (FAT32) ; used to pass data between OS's</dd>
+            </dl>
+            <p>
+                <i>I install windows first in position on the disk because you dont have as much control how it partitions.</i> <br>
+                Eject gparted USB
+            </p>
+        <h2> Installing Windows </h2>
+            <p>
+                Boot windows USB. <br>
+                Install windows to partition making sure it has not formatted to the rest of the disk or overwrote any unallocated space. 
+                I think you can delete the NTFS partition and then use the “new” and it should show you how it is going to partition the drive. 
+                If you see that it has overwrote a partition, you need to boot back into gparted.
+                <br>
+                <i> When windows asks you to sign into microsoft, you can refuse somehow. </i>
+                <br>
+                Eject windows USB.
+            </p>
+        <h2> Installing Linux </h2>
+            <p>
+                Boot Linux USB. <br>
+                Use custom install of linux. Find EXT4 partition and delete it. 
+                Select unallocated space and add partition. Use primary partition, EXT4, and select mount point as root “/“. 
+                Set the size somewhere around 100 Gb. <br>
+                Add another partition and use the remaining unallocated space. 
+                Make it a primary partition, EXT4, and set mount point to “/home”. 
+                At the bottom, install efi or boot loader - whatever is the boot manager portion - 
+                select it and set it the efi, system reserved portion of the windows installation 
+                <i>(should be around a 100 Mb partition, might also say “Windows Boot Manager”).</i> <br>
+                Install and Eject Linux USB <br>
+                
+                <i>Boot into Bios and assign the preferred boot order. </i>
+            </p>
+        <h2> Simple Set Up </h2>
+            <p> 
+                <i>The shared partition will allow you to pass data back and forth between windows and linux.</i>
+                <br><br>
+                Download all your updates and drivers on both systems. 
+                Update to the newest kernel on linux mint by going to update manager, view, and linux kernel. 
+                <br>
+                Customize display settings: Set quality and refresh rate.
+                <br>
+                Dont forget adblockers, preferred browsers, enabling firewalls, customizing privacy and security options, 
+                and customizing desktops.
+                <br>
+                <i> Note: </i> Most OS's both have fairly strong antivirus software already 
+                and it has been suggested that downloading a third-party antivirus for them might make them weaker.
+                
+                For additional network security, check out <a href="https://avoidthehack.com/safing-portmaster"> Safing PortMaster</a> 
+                it is an open source firewall and SPN (which is like a VPN)
+                <br><br>
+                If you want automatic updates, go to software manager and go to edit and the preferences. click the automation tab and select what you like.
+            </p>
+        <h2>Software to Consider</h2>
+            <h3> Linux </h3>
+                <dl class="text-border">
+                    <di> Steam devices </di>
+                        <dd> Installs official valve release of steam </dd>
+                    <di> Minecraft </di>
+                        <dd>Prism launcher for modding</dd>
+                    <di> Gparted</di>
+                        <dd> For viewing and modifying disk</dd>
+                    <di> Mission center</di>
+                        <dd> For monitoring hardware</dd>
+                    <di> Ufw (preinstalled)</di>
+                        <dd> Firewall </dd>
+                    <di> Grub 2??</di>
+                        <dd> No idea if this is real</dd>
+                    <di> Samba?</di>
+                        <dd> Need more Research</dd>
+                    <di> Flat seal</di>
+                        <dd> For managing flat pack privileges</dd>
+                    <di>Bottles</di>
+                        <dd> For VM's and containers ; uses wine</dd>
+                </dl>
+                <p>
+                    <i>Note: </i> Applets are little widgets for your panel; desklets are widgets for your desktop.
+                </p>
+            <h3> Windows </h3>
+                <dl class="text-border">
+                    <di> Steam </di>
+                    <dd></dd>
+                    <di> Vortex Mod Manager </di>
+                        <dd> Currently only works on Windows</dd>
+                    <di> Cinebench</di>
+                        <dd> For stress testing hardware</dd>
+                    <di> WSL2 </di>
+                        <dd> Sort of like a vm for linux</dd>
+                </dl>
+            <h3> Both </h3>
+                <dl class="text-border">
+                    <di> Discord </di>
+                        <dd></dd>
+                    <di> VSCode </di>
+                        <dd></dd>
+                    <di> ProtonVPN </di>
+                        <dd></dd>
+                    <di> Bitwarden</di>
+                    <dd></dd>
+                    <di> Git </di>
+                        <dd></dd>
+                    <di> Balena Etcher</di>
+                        <dd> For writing iso's to a disk</dd>
+                    <di> Jellyfin or Plex </di>
+                        <dd> Jellyfin is open source</dd>
+                    <di> Better Changes??</di>
+                        <dd> Cant remeber what this is ; needs more research</dd>
+
+                </dl>
+        <h2> Resizing Windows Partition</h2>
+            <p>
+                Should you ever need to resize windows to make it larger, with this setup you'll have to move the recovery partition of windows, 
+                which <a href="https://thedxt.ca/2023/06/moving-windows-recovery-partition-correctly/?amp=1"> this article</a> goes into.
+            </p>
+        
+        <br>
+        <br>
+        <br>
+</body>
+
+</html>
