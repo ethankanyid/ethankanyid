@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title > Server Management </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 style="text-align:center;"> Server Management </h1>
+    <p style="text-align:center;"> Jellyfin, Plex, Pi-Hole, and Pi-VPN</p>
+    <a href="linux.html" target="_blank">Linux</a> 
+    <a href="dualboot.html" target="_blank">Dual Boot</a> 
+    <a href="terminal.html" target="_blank">Terminal</a> 
+
+        <h2> Notes </h2>
+        <h3>Multimedia Servers</h3>
+        <p> 
+            <a href="https://www.cuttingcords.com/home/ultimate-server/getting-started"> Cutting the Cords</a> 
+            describes one way to set up a multimedia Server. <br>
+            Things to consider include:    
+        </p>
+        <ul class="text-border"> 
+            <li> ease us video downloader</li>
+            <li> yt-dlp (open source)</li>
+            <li> openwrt (router)</li>
+            <li> Radarr and Sonarr?</li>
+            <li> Samba?</li>
+        </ul>
+    <h3>Pi-Hole</h3>
+    <a href="https://www.crosstalksolutions.com/the-worlds-greatest-pi-hole-and-unbound-tutorial-2023/">Pihole and Unbound Tutorial </a> 
+        <p>
+            First install raspberry pi os lite with the raspberry pi imager. You need at least 2 gigs of ram and 10 gigs of storage.
+            Make sure to install ssh-server with the image.
+            <br>
+            On your router, set the server as a static ip.
+            Then launch the server and ssh into with
+        </p>
+        <p class="text-border"> 
+            ssh username@hostname
+        </p> <br>
+            <p>and run </p>
+        <p class="text-border"> 
+            sudo apt update && sudo apt upgrade -y <br> 
+            curl -sSL https://install.pi-hole.net | bash
+        </p>
+        <br> <p>
+            In the install, most things are just yes, but note if you're using unbound that you'll be changing your upstream provider later. 
+            Once the installation is complete record all your configuration information.
+        <br> <br>
+            For a new password, run
+        </p>    
+            <p class="text-border">
+                pihole -a -p 
+            </p> <br>
+        <p>    
+            You can then log into the web interface with "ip/admin". Use the password provided or the one you changed. 
+            Not much needs to be done here, but you can go to adlists and add lists from firebog. <br>
+            <i>Note: I only use firebog links because I figure they're maintained. Comment the types.</i>
+            <br>
+            Also under interface settings, you might want to change what subnets can use your pihole depending on what you have.
+            </p>
+            
+            <h4> Unbound </h4>
+            <p>
+                Next, to install unbound run 
+            </p>
+            <p class="text-border">    
+            sudo apt install unbound <br>
+            sudo nano -w /etc/unbound/unbound.conf.d/pi-hole.conf
+            </p>
+            <p>
+                <i>Note: I had to install nano</i>
+            <br>
+                In this file, paste a bunch of stuff noted in the link. Then run
+            </p>
+            <p class="text-border">sudo service unbound restart</p>
+        </p>    
+    <h3> Pi-VPN</h3>
+        <p>
+            Now you should be able to install pivpn. 
+        <br>
+            Run 
+        </p>
+        <p class="text-border">    
+            "curl -L https://install.pivpn.io | bash"
+        </p>
+        <p>
+            Everything in this set up should be mostly yes too. It might also detect that pihole is set up.
+            <br><br>
+            I cant be sure of exactly how to do both of these in one, but <a href="https://m.youtube.com/watch?v=VfOz8RWgnz4">this tutorial</a> 
+            was very helpful.
+        </p>
+    <h3> The Parts I havent Figured Out</h3>
+    <dl>
+        <di>What do I need to do for port forwarding?</di>
+            <dd> Go into your router specify the public facing port and forward it to the local ip and opened port.</dd>
+        <di>Do I need to allow any traffic through my firewalls?</di>
+            <dd> Yes! You need to open a port on the server to allow the router to direct traffic in ^^</dd>
+        <di>How does pihole work with pivpn? what about unbound? </di>
+            <dd> The video is the best help Ive found so far</dd>
+        <di>How does ansible work? automation?</di>
+            <dd> No clue :)</dd>
+        <di>sudo pihole -up (keeps pihole up to date)? </di>
+            <dd> No clue :) </dd>   
+        <di> It is possible to run pi hole in a vm, but it might be more efficient to use a docker. How do dockers work? </di>
+            <dd> No Clue :)</dd>
+    </dl>
+
+    <h3> Configuring Wireguard on Device </h3>
+        <p class="text-border">
+            "pivpn -add" <br>
+            "pivpn -qr" or copy the conf to a good location
+        </p>
+        <h5>For Linux</h5>
+        <p class="text-border">
+            sudo apt install wireguard <br>
+            nmcli connection import type wireguard file filename.conf
+        </p>
+        <p>
+            <em> Scripting</em>
+        </p>
+        <p class="text-border">
+            name the file something.sh <br>
+            “#!/bin/bash <br>
+            nmcli connection up/down filename.conf”
+        </p>
+
+<br>
+<br>
+<br>
+</body>
+
+</html>

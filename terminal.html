@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title > Terminal Familiarity </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 style="text-align:center;"> Terminal Familiarity </h1>
+    <p style="text-align:center;"> zsh, wsl2, tmux, tar, vim, and git</p>
+    <a href="linux.html" target="_blank">Linux</a> 
+    <a href="dualboot.html" target="_blank">Dual Boot</a> 
+    <a href="server.html" target="_blank">Servers</a> 
+
+    <h2> ZSH </h2>
+    <p>
+    <a href=https://medium.com/@mdomer19967/how-to-make-your-boring-macos-terminal-look-so-much-better-dd7f80ffeedc> This</a> 
+    is a helpful tutorial for customizing your terminal. ohmyzsh can be used on any terminal running zsh. 
+    On mac, iterm2 is an alternate terminal.
+    <br><br>
+    So, if you havent already, make sure you have a few things:
+    </p>
+    <ul class ="text-border">
+        <li>Homebrew - if on mac</li>
+        <li>Iterm2 - if on mac</li>
+        <li>ZSH</li>
+    </ul>
+    <p>Then you'll be needing:</p>
+    <ul class ="text-border">
+        <li>iterm2 color pallete- if on mac</li>
+        <li>ohmyzsh</li>
+        <li>powerlevel10k</li>
+    </ul>
+    <p>You'll need to edit your ~/.zshrc and display changes by running "source ~/.zshrc"</p>
+
+    <h2> Git </h2>
+        <p>
+            From the terminal, move to the directory you want to create a repository in. <br>
+            Then these commands will then be of value:
+        </p>
+            <dl class="text-border">
+                <di>git init</di>
+                    <dd> initialize repository</dd>
+                <di>git status</di>
+                    <dd> status of branch/commits/adds/...</dd>
+                <di>git add . (or list files)</di>
+                    <dd>stages changes to be committed</dd>
+                <di>git commit -m “message”</di>
+                    <dd>commits the changes with custom message</dd>
+                <di>git log </di>
+                    <dd>see changes</dd>
+            </dl>
+            <dl class="text-border">
+                <di>git checkout</di>
+                    <dd>see previous commit or branch</dd>
+                <di>git branch</di>
+                    <dd>shows branches or add name for new branch</dd>
+                <di>git merge branchname</di>
+                    <dd>merges specified branch to active branch</dd>
+            </dl>
+            <dl class="text-border">
+                <di>git remote add origin https://github/...</di>
+                    <dd>origin is name for the remote</dd>
+                <di>git remote remove name</di>
+                    <dd>removes remote</dd>
+                <di>git push -u origin main</di>
+                    <dd>pushes main to origin</dd>
+                <di>git remote -v</di>
+                    <dd>lists remotes</dd>
+                <di>git pull origin main</di>
+                    <dd>pulls changes from main branch at origin</dd>
+                <di>git clone url</di>
+                    <dd>clones a repo locally - do not clone a repo into a different repo!</dd>
+            </dl>
+            <p>Fork takes a repo and creates a repo for you to edit. A pull request merges it to the forked branch if allowed.</p>
+
+    <h2> Tar </h2>
+        <p> 
+            -c (create) <br>
+            -x (extract) <br>
+            -zvf (gzip, verbose,location) <br>
+        </p>
+        <dl class = "text-border">
+            <di>tar -czvf (archive name) (filelist)</di>
+                <dd>creating tar</dd>
+            <di>tar -xzvf (archive name)</di>
+                <dd>extracting tar</dd>
+        </dl>
+    
+    <h2> WSL2 </h2>
+    <p>Allows you to access your windows system through a linux terminal.</p>
+        <ol class = "text-border">
+            <li>wsl.exe —install</li>
+            <li>wsl —list —online</li>
+            <li>wsl —install -d specificdistro</li>
+            <li>wsl -d specificdistro</li>
+            <li>sudo apt install build-essentials</li>
+        </ol>
+    <h2> TMUX </h2>
+        <dl class="text-border">
+            <di>tmux</di>
+                <dd> opens session</dd>
+            <di>ctrl-b + d</di>
+                <dd> save and exit session</dd>
+            <di>ctrl-d </di>
+                <dd>exit session</dd>
+        </dl>
+        <dl class="text-border">
+            <di>ctrl-b + %</di>
+                <dd>split vertically</dd>
+            <di>ctrl-b + "</di>
+                <dd>split horizontally</dd>
+            <di>ctrl-b + x</di>
+                <dd>kill terminal or panel</dd>
+        </dl>
+        <dl class="text-border">
+            <di>ctrl-b + $</di>
+                <dd>rename terminal</dd>
+            <di>ctrl-b + w </di>
+                <dd>lists</dd>
+            <di>ctrl-b + ,</di>
+                <dd>renames session</dd>
+        </dl>
+    <h2> Vim </h2>
+        <p>Vim customizations yet to be documented</p>
+
+<br>
+<br>
+<br>
+</body>
+
+</html>
