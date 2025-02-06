@@ -1,0 +1,20 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-r": ["task::Spawn", { "task_name": "run file" }]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-g": ["task::Spawn", { "task_name": "update git" }]
+    }
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "cmd-shift-g": ["task::Spawn", { "task_name": "update git" }]
+    }
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "label": "run file",
+    "command": "sh ~/.config/zed/custom_runfile.sh",
+    "description": "Compiles and runs the current code file",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "update git",
+    "command": "sh ~/.config/zed/update_git.sh",
+    "description": "Saves file and updates git",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  }
+]

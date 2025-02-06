@@ -1,0 +1,53 @@
+
+# Users
+
+adduser NAME (adds user)
+adduser NAME GROUP (adds user to group)
+members GROUP (lists group members)
+addgroup GROUP (adds group)
+
+whoami (username)
+
+# Basics
+
+apt update/upgrade
+cd/ls/mv/mkdir/chmod/chgrp/pwd/cat
+
+ip a (gets ip)
+
+sudo su - (logs you in as root)
+
+shutdown -r (reboots)
+
+# Software 
+
+-git
+-curl
+-wget
+-nano/vim
+-neofetch
+-members
+-bash
+-gparted
+
+# Firewall
+
+sudo ufw enable/status/disbale
+sudo ufw allow PORTNUMBER
+
+# Directories
+
+mkdir -m 775 NAME (creates directory with group access
+chgrp GroupName File/Directory
+
+# Moving
+
+mv OldPathName NewPathName
+
+
+
+# Raid
+
+sudo mdadm --create --verbose /dev/md0 --level=5 --raid-devices=4 /dev/sda /dev/sdb /dev/sdc /dev/sdd
+
+cat /proc/mdstat
