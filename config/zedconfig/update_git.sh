@@ -2,8 +2,13 @@
 
 # Check if the current directory is a Git repository
 if ! git rev-parse --is-inside-work-tree &>/dev/null; then
-    echo "Not inside a Git repository. Exiting."
-    exit 1
+    read -p "Not inside a Git repository. Would you like to initialize a repo? " response
+    if [[ "$response" =~ ^[Yy]$ ]]; then
+        git init -b main;
+    else
+    echo "Exiting";
+    exit;
+    fi
 fi
 
 # Check if there are remote connections
@@ -25,6 +30,8 @@ if [ -z "$changes" ]; then
     echo "No changes to commit. Exiting."
     exit 0
 fi
+
+git add .
 
 # Prompt for the commit message
 echo "Enter your commit message:"

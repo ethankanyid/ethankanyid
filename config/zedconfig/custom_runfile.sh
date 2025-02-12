@@ -13,11 +13,18 @@ extension="${filename_ext##*.}"
 # Check if Makefile exists in the current directory or if the command was operated on Makefile
 if [ -f "Makefile" ]; then
     if [[ "$filename" == "Makefile" ]]; then
-        make run && exit
+        make run;
+        exit;
     else
         read -p "A Makefile was found. Do you want to run it? (Y/N): " response
         if [[ "$response" =~ ^[Yy]$ ]]; then
-            make run && exit
+            make run;
+            exit;
+        else
+            read -p "Did you mean to run $filename_ext? (Y/N): " response
+            if [[ ! "$response" =~ ^[Yy]$ ]]; then
+            exit 0;
+            fi
         fi
     fi
 fi

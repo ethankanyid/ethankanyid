@@ -14,5 +14,13 @@
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
     "reveal": "always"
+  },
+  {
+    "label": "insert makefile",
+    "command": "sh ~/.config/zed/insert_make.sh",
+    "description": "Adds a makefile to the directory",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
   }
 ]

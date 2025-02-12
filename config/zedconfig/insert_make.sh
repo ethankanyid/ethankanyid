@@ -1,4 +1,12 @@
-# compiling macros
+#!/bin/bash
+
+
+
+# Assign input arguments to variables
+target_directory=$(dirname "$full_path")
+
+# Define Makefile contents as a literal string
+makefile_contents='# compiling macros
 CC = gcc
 CFLAGS = -g -Wall -Wstrict-prototypes
 LDFLAGS = -g
@@ -40,5 +48,15 @@ immaculate: clean
 $(BIN): $(OBJ)
 	@$(CC) -o $@ $^ $(LDFLAGS)
 
-#@ suppresses commands
+#@ suppresses commands\n'
 
+# Write the contents to a Makefile in the target directory
+echo "$makefile_contents" > "$target_directory/Makefile"
+
+# Confirm the action
+if [ $? -eq 0 ]; then
+    echo "Successfully wrote the Makefile"
+else
+    echo "Error: Failed to write Makefile"
+    exit 2
+fi
