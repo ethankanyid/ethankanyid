@@ -1,11 +1,29 @@
-<h1>Hi, I'm Ethan! <br/>
+# Hi, I'm Ethan! 👋
 
-<h2>About me:</h2>
+## About Me
 
-I am a self-motivated and driven individual who also highly values family, teamwork, and strong personal connections. I completed my AA from Columbia Basin College as a high scholl student. I took a gap year to engage in a personal growth opportunity by attending Legacy Bible Institute which culminated in an opportunity to work with 1400 youth at Life Song for Orphans in Zambia. I am currently pursuing a Computer Science degree as a senior at Washington State Univiersity and I am seeking a local internship that will give me practical experience in the field of computer science.
+I am a self-motivated and driven individual who values family, teamwork, and strong personal connections. I completed my AA from Columbia Basin College while still in high school. Afterward, I took a gap year to engage in personal growth by attending Legacy Bible Institute, which led to an incredible opportunity to work with 1,400 youth at **Life Song for Orphans** in Zambia.
 
-<h2>Connect with me:</h2>
+I am currently pursuing a **Computer Science** degree as a senior at **Washington State University** and am actively seeking a local internship to gain practical experience in the field of computer science.
 
-[<img align="left" alt="JoshMadakor | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+#### My Tech Stack
 
-[linkedin]: www.linkedin.com/in/ethan-kanyid
+- **Languages:** C, C++, Assembly, and some Python
+- **Tools:** Git, Docker, Zed, Bash
+
+<!-- 
+## Featured Project
+
+- [**Turing Machine Simulation**](https://github.com/ethankanyid/classwork/322/TM) - A C++ project simulating a Turing machine.
+-->
+#### Achievements & Certifications & Activities
+
+- **CompTIA Security+ Certified**
+- **Presidential Scholarship - Washington State University**
+- Coding Cougs Member
+
+### Connect with Me
+
+<a href="https://www.linkedin.com/in/ethan-kanyid">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" width="40"/>
+</a>
