@@ -1,4 +1,4 @@
-# Hi, I'm Ethan! 👋
+# Hi, I'm Ethan!
 
 ## About Me
 
@@ -6,16 +6,7 @@
 
 I am self-motivated and value family, teamwork, and meaningful personal connections. I earned my Associate’s degree from Columbia Basin College while still in high school and took a gap year to attend Legacy Bible Institute. This experience led to a life-changing opportunity to work with over 1,400 youth at Life Song for Orphans in Zambia. 
 
-#### My Tech Stack
-
-- **Languages:** C, C++, Assembly, and some Python
-- **Tools:** Git, Docker, Zed, Bash
-
-#### Achievements & Certifications & Activities
-
-- **CompTIA Security+ Certified**
-- **Presidential Scholarship - Washington State University**
-- Coding Cougs Member
+##### **_<u>As of 6-01-2025 I started all my repositories from scratch to ensure I was not comprosing confidential information, which means my git history is not as robust as it once was.</u>_**
 
 ### Connect with Me
 
