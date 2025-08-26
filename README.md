@@ -13,7 +13,7 @@ I am self-motivated and value family, teamwork, and meaningful personal connecti
 <a href="https://www.linkedin.com/in/ethan-kanyid">
   <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" width="40"/>
 </a>
-<a href="https://ethankanyid.github.io" target="_blank" rel="noopener noreferrer" style="display:inline-block;">
+<a href="https://ethan.kanyid.dev" target="_blank" rel="noopener noreferrer" style="display:inline-block;">
   <img 
     src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
     alt="GitHub.io" 
