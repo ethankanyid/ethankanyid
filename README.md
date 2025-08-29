@@ -6,7 +6,7 @@
 
 I am self-motivated and value family, teamwork, and meaningful personal connections. I earned my Associate’s degree from Columbia Basin College while still in high school and took a gap year to attend Legacy Bible Institute. This experience led to a life-changing opportunity to work with over 1,400 youth at Life Song for Orphans in Zambia. 
 
-##### **_<u>As of 6-01-2025 I started all my repositories from scratch to ensure I was not comprosing confidential information, which means my git history is not as robust as it once was.</u>_**
+##### **_<u>As of 6-01-2025 I started all my repositories from scratch to ensure I was not compromising confidential information, which means my git history is not as robust as it once was.</u>_**
 
 ### Connect with Me
 
