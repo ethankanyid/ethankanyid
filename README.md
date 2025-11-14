@@ -10,7 +10,7 @@ I am self-motivated and value family, teamwork, and meaningful personal connecti
 
 ### Connect with Me
 
-<a href="https://www.linkedin.com/in/ethan-kanyid">
+<a href="https://www.linkedin.com/in/ethankanyid">
   <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" width="40"/>
 </a>
 <a href="https://ethan.kanyid.dev" target="_blank" rel="noopener noreferrer" style="display:inline-block;">
