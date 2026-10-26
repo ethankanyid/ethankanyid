@@ -2,7 +2,7 @@
 
 ## About Me
 
-I am currently an intern at PNNL working in cyber security. I am also a Computer Science graduate (2026) from Washington State University with a specialization in cyber security. Currently, I contribute to secure infrastructure at Pacific Northwest National Laboratory by developing data workflows with Python, SQL, and Apache Airflow. Additionally, I contribute to a RAG pipeline where I manage the deployment and use of local embedding models. I have a strong foundation in low-level computing, including C/C++ and Linux systems, and maintain a 3.95 GPA.
+I am a Cyber Security Engineer at Pacific Northwest National Laboratory and a Computer Science graduate (2026) from Washington State University with a specialization in cyber security. In my role, I contribute to secure infrastructure by developing data workflows with Python, SQL, and Apache Airflow. These workflows are used to create network analytics on DNS traffic including domain typo squatting detection. Additionally, I contribute to a RAG pipeline where I manage the interface and deployment between varying LLM's and embedding models. I have a strong foundation in low-level computing, including C/C++ and Linux systems.
 
 I am self-motivated and value family, teamwork, and meaningful personal connections. I earned my Associate’s degree from Columbia Basin College while still in high school and took a gap year to attend Legacy Bible Institute. This experience led to a life-changing opportunity to work with over 1,400 youth at Life Song for Orphans in Zambia.
 
